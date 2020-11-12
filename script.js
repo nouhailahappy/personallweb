@@ -20,6 +20,12 @@ function fonction(){
   menu.classList.remove('active')
   header.classList.add('active')
 }
+//change nav on scrolling 
+window.addEventListener('scroll', function () {
+    let header = document.querySelector('header');
+    let windowPosition = window.scrollY > 0;
+    header.classList.toggle('scrolling-active', windowPosition);
+})
 
 // scroll reveal 
 window.sr = ScrollReveal();

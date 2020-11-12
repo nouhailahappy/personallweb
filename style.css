@@ -32,14 +32,14 @@ header{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--main-font-color-dark) ;
+  background-color: transparent ;
   height: 8vh;
 }
 header .logo{
     text-align: center;
     margin-left: 20px;
     cursor: pointer;
-    color: #f2f2f2;
+    color: var(--main-font-color-dark);
     text-transform: uppercase;
     letter-spacing: 4px;
     padding-right: 50px;
@@ -60,7 +60,7 @@ header .toggle span{
 }
 header .toggle .one{
     width: 15px;
-    background: #f2f2f2;
+    background: var(--secondary-font-color);
 }
 header .toggle .three{
     background:  var(--secondary-font-color);
@@ -68,7 +68,7 @@ header .toggle .three{
 }
 header .toggle .four{
     width: 40px;
-    background-color: #f2f2f2;
+    background-color: var(--secondary-font-color);
 }
 header .toggle .one{
     top: 0;
@@ -104,7 +104,7 @@ header .active .three{
 }
 .menuoverlay ul li a{
   position: relative;
-  color: #f2f2f2;
+  color: var(--main-font-color-dark);
   text-decoration: none;
   letter-spacing: 3px;
   font-size: 12px;
@@ -131,6 +131,23 @@ header .active .three{
   color: var(--main-font-color-dark);
   background-image: linear-gradient(to right, var(--secondary-font-color) 0, var(--secondary-font-color) 100%);
   border-radius: 4px;
+}
+
+
+.scrolling-active header{
+    height: 6.6rem;
+}
+
+.scrolling-active .menuoverlay ul li a{
+    color: #f1f1f1;
+}
+
+.scrolling-active .logo{
+    color: var(--cool-color);
+}
+.scrolling-active{
+    background-color: #142638;
+    box-shadow: 0 9px 1rem rgba(0,0,0,.1);
 }
 
   /*hero*/
@@ -485,12 +502,14 @@ header .active .three{
       }
       header{
         position: fixed;
+        background-color: transparent;
       }
       .underlined:hover{
         background-size: 0 0;
       }
       header .logo{
             font-size: 1.4em;
+            color: var(--main-font-color-dark);
         }
       header .toggle{
             display: block;
@@ -510,7 +529,7 @@ header .active .three{
       }
       .menuoverlay{
         position: fixed;
-        top: 1px;left: 0;right: 0;bottom: 0;
+        top: 0px;left: 0;right: 0;bottom: 0;
         background: #f0f0f0;
         opacity: 1;
         z-index: 1;
@@ -523,7 +542,7 @@ header .active .three{
         width: 100%;
         min-height: 100vh;
     }
-      .menuoverlay ul li a{
+      .scrolling-active .menuoverlay ul li a, .menuoverlay ul li a{
         position: relative;
         text-decoration: none;
         font-size: 20px;
