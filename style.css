@@ -84,12 +84,12 @@ header .active .one,header .active .four{
 }
 header .active .two{
     transform:rotate(45deg);
-    background: var(--secondary-font-color);
+    background: var(--main-font-color-dark);
 }
 header .active .three{
     width: 50px;
     transform:rotate(-45deg);
-    background: #f2f2f2;
+    background: var(--main-font-color-dark);
 }
 
 .menuoverlay.active{
@@ -510,7 +510,7 @@ header .active .three{
       }
       .menuoverlay{
         position: fixed;
-        top: 50px;left: 0;right: 0;bottom: 0;
+        top: 0px;left: 0;right: 0;bottom: 0;
         background: #f2f2f2;
         opacity: 1;
         z-index: 1;
