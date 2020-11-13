@@ -311,7 +311,7 @@ header .active .three{
     line-height: 50px;
   }
   .about{
-    height: 90vh;
+    height: 70vh;
     overflow:hidden;
     padding: 20px;
     display: flex;
@@ -346,10 +346,10 @@ header .active .three{
       content: '';
       position: relative;
       width: 2px;
-      height: 60vh;
+      height: 55vh;
       background-color: var(--main-font-color-dark);
       left: 15%;
-      top: 15%;
+      top: 25%;
   }
   /*SKILLS*/
 .inner{
@@ -490,6 +490,160 @@ header .active .three{
   ::-webkit-scrollbar-thumb:hover {
     background: #89a6a1;
   }  
+
+  /**CONTACT**/
+
+.contact{
+    position: relative;
+    width: 100%;
+    display: flex;
+    padding: 90px;
+  }
+  .contact .content{
+    width: 40%;
+    margin-right: 6rem;
+  }
+  .contact-form{
+    max-width: 800px;
+    margin: auto;
+    padding: 20px 20px;
+    overflow: hidden;
+    background-size: cover;
+  }
+  .contact-form-text{
+    margin: 14px 0;
+    padding: 20px 40px;
+    transition: 0.5s;
+    width: 90%;
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: var(--main-font-color-dark);
+    border-bottom: 2px solid var(--secondary-font-color);
+  }
+  textarea.contact-fomr-text{
+    resize: none;
+    height: 120px;
+  }
+  .contact-form-btn{
+    float: right;
+    border: 0;
+    background: var(--secondary-font-color);
+    color: white;
+    padding: 6px 12px;
+    cursor: pointer;
+    transition: 0.5s;
+    font-size: 14px;
+    margin-top: 2.4rem;
+    letter-spacing: 2px;
+  }
+  .contact-form-btn:hover{
+    background-color: rgb(231, 231, 231);
+    color: var(--secondary-font-color);
+    font-weight: bold;
+    border-bottom: 3px var(--secondary-font-color) solid;
+  }
+  
+  
+  form .btnn {
+    overflow: hidden;
+    cursor: pointer;
+    position: absolute;
+    opacity: 0;
+    bottom: 8.4rem;
+    cursor: pointer;
+    left: 7rem;
+    z-index: 10;
+    padding: 10px;
+    width: 100px;
+    background-color: transparent;
+  }
+  
+  .btn {
+    display: block;
+    position: absolute;
+    padding: 12px 20px;
+    background-color: transparent;
+    color: var(--dark-color);
+    cursor: pointer;
+    font-weight: 500;
+    font-size: .8rem;
+    letter-spacing: 1.4px;
+    border-bottom: 2px solid var(--secondary-font-color);
+    opacity: .7;
+  }
+  .btn:hover{
+    background-color: white;
+    color: var(--secondary-font-color);
+    font-weight: 600;
+  }
+  .contact .image{
+    width: 35%;
+    background-image: url(siteimage/contactus.jpg);
+    background-size: cover;
+    background-position: center;
+    margin-left: 3rem;
+    right: 0;
+    height: 80vh;
+    border-top: 1rem solid var(--secondary-font-color);
+  }
+  .contact .image::after{
+      content: '';
+      position: absolute;
+      width: 100%;
+      background-color: var(--secondary-font-color);
+      height: 100%;
+      opacity: .3;
+      z-index: 15000;
+  }
+  .filetext{
+    color: var(--dark-color);
+    font-size: 14px;
+    letter-spacing: 1px;
+    line-height: 2.7rem;
+    text-align: justify;
+    padding: 10px;
+    font-weight: 500;
+    margin-top: 4rem;
+  }
+  .contact .sub-headline {
+      letter-spacing: 0;
+      margin-bottom: 2rem;
+  }
+  
+  @media screen and (max-width:768px){
+    .contact{
+        padding: 0 5.5rem;
+        height: 100%;
+        width: 60%;
+        left: -3rem;
+        display: flex;
+        flex-direction: column;
+    }
+    .contact-form-btn{
+      margin-top: 5rem;
+      left: 0;
+    }
+    .contact .image{
+      display: none;
+    }
+    .contact .content{
+      width: 140%;
+      text-align: left;
+      align-items: center;
+      justify-content: center;
+    }
+    .contact .subtitle{
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+  }
+  
 @media screen and (max-width:1024px){
     .menu-overlay{
       width: 60%;
@@ -585,9 +739,11 @@ header .active .three{
         padding: 0;
     }
     .skills .container{
-        grid-template-columns: 1fr;}
+        grid-template-columns: 1fr;
+    }
+
     .about{
-        padding: 60px;
+        padding: 30px;
         height: 110rem;
         display: flex;
         flex-direction: column;
