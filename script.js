@@ -27,6 +27,26 @@ window.addEventListener('scroll', function () {
     header.classList.toggle('scrolling-active', windowPosition);
 })
 
+//readmore pop-up
+function popup(){
+  var popup = document.getElementById('popup');
+  popup.classList.toggle('active');
+}
+function popup1(){
+  var popup1 = document.getElementById('popup1');
+  popup1.classList.toggle('active');
+}
+
+var modalBtn = document.querySelector('.boutton');
+var modalBg = document.querySelector('.modal-bg');
+var modalClose = document.querySelector('.modal-close');
+modalBtn.addEventListener('click',function(){
+  modalBg.classList.add('bg-active');
+})
+modalClose.addEventListener('click', function(){
+  modalBg.classList.remove('bg-active');
+})
+
 // scroll reveal 
 window.sr = ScrollReveal();
 sr.reveal(".animate-left", {
