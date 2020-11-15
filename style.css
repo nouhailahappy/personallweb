@@ -740,6 +740,26 @@ header .active .three{
   opacity: 1;
   z-index: 1;
 }
+
+/* Underline title*/
+
+.all-blogs-area .Underline-container .Underline{
+  display: flex;
+  padding: 15px 0;
+  margin-left: 45%;
+  position: relative;
+}
+.all-blogs-area .Underline-container .Underline .first-underline{
+  height: 3px;
+  width: 30px;
+  background: #142638;
+  margin-right: 15px;
+}
+.all-blogs-area .Underline-container .Underline .second-underline{
+  height: 3px;
+  width: 45px;
+  background: #142638;
+}
   
   @media screen and (max-width:768px){
     .contact{
